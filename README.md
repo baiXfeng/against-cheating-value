@@ -10,4 +10,4 @@ Anti-cheating-value is a plugin that prevents cheat tools from modifying sensiti
 - The anti-cheat variables are accessed in the form of key-value pairs, so please ensure the uniqueness of the keys to avoid mistakenly overwriting the correct data.
 - Using this plugin may cause additional runtime performance overhead, so please control where to use it.
 
-<iframe src="https://youtu.be/lVJk9zAZP1w" width="700" height="472" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+[![Watch the video](scene/icon.png)](https://youtu.be/lVJk9zAZP1w)
