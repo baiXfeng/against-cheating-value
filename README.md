@@ -6,4 +6,8 @@ Anti-cheating-value is a plugin that prevents cheat tools from modifying sensiti
 - Override the setter and getter for the sensitive data in your game.
 - Point the getter and setter for the sensitive data to the corresponding variables provided by the Anti-cheating-value plugin.
 
-<iframe src="https://youtu.be/lVJk9zAZP1w" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"  width="700px" height="472px"> </iframe>
+# Notice
+- The anti-cheat variables are accessed in the form of key-value pairs, so please ensure the uniqueness of the keys to avoid mistakenly overwriting the correct data.
+- Using this plugin may cause additional runtime performance overhead, so please control where to use it.
+
+<iframe src="https://youtu.be/lVJk9zAZP1w" width="700" height="472" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
