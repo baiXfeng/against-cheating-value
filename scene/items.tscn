@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwybg8txfoene"]
+
+[ext_resource type="Script" path="res://scene/items.gd" id="1_kx6oo"]
+
+[node name="Items" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 25
+script = ExtResource("1_kx6oo")
+
+[node name="Title" type="Label" parent="."]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="Value" type="Label" parent="."]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="Add" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Add"
+
+[node name="Reduce" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Reduce"
+
+[node name="Refresh" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Refresh"
+
+[connection signal="pressed" from="Add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="Reduce" to="." method="_on_reduce_pressed"]
+[connection signal="pressed" from="Refresh" to="." method="_on_refresh_pressed"]

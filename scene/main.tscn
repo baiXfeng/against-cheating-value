@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkvvtqrploijy"]
+
+[ext_resource type="Script" path="res://scene/main.gd" id="1_34mih"]
+[ext_resource type="PackedScene" uid="uid://bwybg8txfoene" path="res://scene/items.tscn" id="1_f8vfw"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_34mih")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Test1" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_f8vfw")]
+layout_mode = 2
+title = "anti-cheating-data:"
+
+[node name="Test2" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_f8vfw")]
+layout_mode = 2
+title = "normal data:"
+
+[connection signal="on_add" from="CenterContainer/VBoxContainer/Test1" to="." method="_on_test_1_on_add"]
+[connection signal="on_reduce" from="CenterContainer/VBoxContainer/Test1" to="." method="_on_test_1_on_reduce"]
+[connection signal="on_refresh" from="CenterContainer/VBoxContainer/Test1" to="." method="_on_test_1_on_refresh"]
+[connection signal="on_add" from="CenterContainer/VBoxContainer/Test2" to="." method="_on_test_2_on_add"]
+[connection signal="on_reduce" from="CenterContainer/VBoxContainer/Test2" to="." method="_on_test_2_on_reduce"]
+[connection signal="on_refresh" from="CenterContainer/VBoxContainer/Test2" to="." method="_on_test_2_on_refresh"]
