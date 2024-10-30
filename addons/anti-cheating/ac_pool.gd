@@ -1,32 +1,30 @@
 extends Node
 class_name ac_pool
 
-var _pool: Dictionary
+var _dict: ac_dict = ac_dict.new()
 
 func _init(parent: Node = null):
 	if parent:
 		parent.add_child(self)
 	
 func set_value(key: String, value: ac_value):
-	_pool[key] = value
+	_dict.set_value(key, value)
 	
 func get_value(key: String, default_value: ac_value = ac_value.new()) -> ac_value:
-	if _pool.has(key):
-		return _pool[key]
-	return default_value
+	return _dict.get_value(key, default_value)
 	
 func has(key: String) -> bool:
-	return _pool.has(key)
+	return _dict.has(key)
 	
 func keys() -> Array[String]:
-	return _pool.keys()
+	return _dict.keys()
 	
 func erase(key: String) -> bool:
-	return _pool.erase(key)
+	return _dict.erase(key)
 	
 func clear():
-	_pool.clear()
+	_dict.clear()
 	
 func is_empty() -> bool:
-	return _pool.is_empty()
+	return _dict.is_empty()
 	
