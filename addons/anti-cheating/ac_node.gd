@@ -1,6 +1,13 @@
 extends Node
 class_name ac_node
 
+# The number of times interference data is generated; the higher the value, the lower the performance, but the better the effect.
+var disturb: int = 0:
+	set(v):
+		_dict.disturb = v
+	get:
+		return _dict.disturb
+
 var _dict: ac_dict = ac_dict.new()
 
 func _init(parent: Node = null):

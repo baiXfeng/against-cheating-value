@@ -17,3 +17,7 @@ func value() -> int:
 func _get_validator() -> ac_validator:
 	return preload("int_validator.gd").new()
 	
+# override
+func duplicate() -> ac_value:
+	return ac_int.new(_value)
+	

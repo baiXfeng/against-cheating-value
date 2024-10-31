@@ -15,6 +15,6 @@ func with(value: float) -> ac_validator:
 func check(value: float) -> bool:
 	return (_0 + _2) == int(value) and (_1 - _2) == int(value)
 	
-func source() -> float:
+func source():
 	return _2 - _3
 	

@@ -8,7 +8,7 @@ func _init(v: float = 0) -> void:
 	_value = v
 	_validator = get_validator().with(v)
 	
-func value() -> float:
+func value():
 	if not _validator.check(_value):
 		return _validator.source()
 	return _value
@@ -16,4 +16,8 @@ func value() -> float:
 # override
 func _get_validator() -> ac_validator:
 	return preload("float_validator.gd").new()
+	
+# override
+func duplicate() -> ac_value:
+	return ac_float.new(_value)
 	

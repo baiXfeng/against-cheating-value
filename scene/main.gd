@@ -13,6 +13,9 @@ var _acvalue: int:	# anti-cheating int: Cannot easily search and modify from mem
 	
 var _value: int # normal int: Can easily search and modify from memory.
 
+func _ready() -> void:
+	_pool.disturb = 10
+
 func _on_test_1_on_add(sender: Variant) -> void:
 	_acvalue += 120
 	_test1.value = _acvalue
