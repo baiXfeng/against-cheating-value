@@ -3,7 +3,7 @@ extends Control
 @onready var _test1 = $CenterContainer/VBoxContainer/Test1
 @onready var _test2 = $CenterContainer/VBoxContainer/Test2
 
-var _pool: ac_pool = acGlobalPool
+var _pool: ac_node = acGlobalPool
 
 var _acvalue: int:	# anti-cheating int: Cannot easily search and modify from memory.
 	set(v):

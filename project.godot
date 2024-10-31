@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-acGlobalPool="*res://addons/anti-cheating/ac_pool.gd"
+acGlobalPool="*res://addons/anti-cheating/ac_node.gd"
 
 [editor_plugins]
 

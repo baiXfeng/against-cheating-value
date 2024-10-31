@@ -1,5 +1,5 @@
 extends Node
-class_name ac_pool
+class_name ac_node
 
 var _dict: ac_dict = ac_dict.new()
 
