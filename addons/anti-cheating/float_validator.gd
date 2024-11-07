@@ -1,20 +1,22 @@
 extends ac_validator
 
-var _0: int = 0
-var _1: int = 0
-var _2: int = 0
-var _3: float = 0
+var _s0: float = 0
+var _s1: float = 0
+var _1: float = 0
+var _2: float = 0
+var _3: int = 0
 
 func with(value: float) -> ac_validator:
-	_2 = Time.get_unix_time_from_system()
-	_0 = int(value) - _2
-	_1 = int(value) + _2
-	_3 = _2 - value
+	_3 = Time.get_unix_time_from_system()
+	_s1 = randf_range(1.5, 2)
+	_s0 = value * -_s1
+	_1 = int(value) + _3
+	_2 = value - int(value)
 	return self
 	
 func check(value: float) -> bool:
-	return (_0 + _2) == int(value) and (_1 - _2) == int(value)
+	return (_1 - _3) == int(value) and (value - int(value) - _2) * 10000 < 10 
 	
 func source():
-	return _2 - _3
+	return _s0 / -_s1
 	
