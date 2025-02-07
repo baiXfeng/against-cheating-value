@@ -1,5 +1,5 @@
 extends Node
-class_name ac_node
+class_name ACNode
 
 # The number of times interference data is generated; the higher the value, the lower the performance, but the better the effect.
 var disturb: int = 0:
@@ -8,16 +8,16 @@ var disturb: int = 0:
 	get:
 		return _dict.disturb
 
-var _dict: ac_dict = ac_dict.new()
+var _dict: ACDict = ACDict.new()
 
 func _init(parent: Node = null):
 	if parent:
 		parent.add_child(self)
 	
-func set_value(key: String, value: ac_value):
+func set_value(key: String, value: ACValue):
 	_dict.set_value(key, value)
 	
-func get_value(key: String, default_value: ac_value = ac_value.new()) -> ac_value:
+func get_value(key: String, default_value: ACValue = ACValue.new()) -> ACValue:
 	return _dict.get_value(key, default_value)
 	
 func has(key: String) -> bool:

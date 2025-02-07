@@ -1,8 +1,8 @@
-extends ac_value
-class_name ac_int
+extends ACValue
+class_name ACInt
 
 var _value: int
-var _validator: ac_validator
+var _validator: ACValidator
 	
 func _init(v: int = 0) -> void:
 	_value = v
@@ -14,10 +14,10 @@ func value() -> int:
 	return _value
 	
 # override
-func _get_validator() -> ac_validator:
+func _get_validator() -> ACValidator:
 	return preload("int_validator.gd").new()
 	
 # override
-func duplicate() -> ac_value:
-	return ac_int.new(_value)
+func duplicate() -> ACValue:
+	return ACInt.new(_value)
 	

@@ -1,8 +1,8 @@
 extends RefCounted
-class_name ac_validator
+class_name ACValidator
 
 # override
-func with(value) -> ac_validator:
+func with(value) -> ACValidator:
 	# Save the original data
 	return self
 	

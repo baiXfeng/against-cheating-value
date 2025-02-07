@@ -1,7 +1,7 @@
 extends RefCounted
-class_name ac_value
+class_name ACValue
 
-func get_validator() -> ac_validator:
+func get_validator() -> ACValidator:
 	return _get_validator()
 	
 # override
@@ -9,10 +9,10 @@ func value():
 	return 0
 	
 # override
-func duplicate() -> ac_value:
-	return ac_value.new()
+func duplicate() -> ACValue:
+	return ACValue.new()
 	
 # override
-func _get_validator() -> ac_validator:
-	return ac_validator.new()
+func _get_validator() -> ACValidator:
+	return ACValidator.new()
 	
