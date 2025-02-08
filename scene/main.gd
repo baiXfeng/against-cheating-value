@@ -3,13 +3,13 @@ extends Control
 @onready var _test1 = $CenterContainer/VBoxContainer/Test1
 @onready var _test2 = $CenterContainer/VBoxContainer/Test2
 
-var _pool: ac_node = acGlobalPool
+var _pool: ACNode = acGlobalPool
 
 var _acvalue: int:	# anti-cheating int: Cannot easily search and modify from memory.
 	set(v):
-		_pool.set_value("namespace:value", ac_int.new(v))
+		_pool.set_value("namespace:value", ACInt.new(v))
 	get:
-		return _pool.get_value("namespace:value", ac_int.new(0)).value()
+		return _pool.get_value("namespace:value", ACInt.new(0)).value()
 	
 var _value: int # normal int: Can easily search and modify from memory.
 

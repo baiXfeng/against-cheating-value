@@ -1,11 +1,11 @@
-extends ac_validator
+extends ACValidator
 
 var _0: int = 0
 var _1: int = 0
 var _2: int = 0
 var _3: int = 0
 
-func with(value: int) -> ac_validator:
+func with(value: int) -> ACValidator:
 	_2 = Time.get_unix_time_from_system()
 	_0 = value - _2
 	_1 = value + _2

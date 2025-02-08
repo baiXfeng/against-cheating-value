@@ -1,8 +1,8 @@
-extends ac_value
-class_name ac_float
+extends ACValue
+class_name ACFloat
 
 var _value: float
-var _validator: ac_validator
+var _validator: ACValidator
 	
 func _init(v: float = 0) -> void:
 	_value = v
@@ -14,10 +14,10 @@ func value():
 	return _value
 	
 # override
-func _get_validator() -> ac_validator:
+func _get_validator() -> ACValidator:
 	return preload("float_validator.gd").new()
 	
 # override
-func duplicate() -> ac_value:
-	return ac_float.new(_value)
+func duplicate() -> ACValue:
+	return ACFloat.new(_value)
 	
